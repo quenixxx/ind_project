@@ -27,3 +27,23 @@ skill1.addEventListener("mouseover", function(event){
 skill1.addEventListener("mouseout", function(event){
     skill1.style.animation = "none"
 })
+document.querySelector('button').addEventListener('click', () => {
+    const egg = document.getElementById('easter-egg');
+    egg.style.display = 'block';
+
+    setTimeout(() => {
+        egg.style.display = 'none';
+    }, 1000);
+});
+window.addEventListener('DOMContentLoaded', () => {
+    const music = document.getElementById('bg-music');
+    music.volume = 0.1;
+    const enableAudio = () => {
+        music.play().catch(e => {
+            console.log("Автовоспроизведение заблокировано:", e);
+        });
+        window.removeEventListener('click', enableAudio);
+    };
+
+    window.addEventListener('click', enableAudio);
+});
