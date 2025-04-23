@@ -155,17 +155,6 @@ body{
     margin: 0;
     width: 45%;
 }
-@keyframes skill-h2{
-    from{
-        color: rgb(28, 89, 255);
-    }
-    50%{
-        color: rgb(115, 153, 255);
-    }
-    to{
-        color: rgb(28, 89, 255);
-    }
-}
 .skill h2{
     margin: 0;
     animation: skill-h2 2s infinite ease 1s;
@@ -180,4 +169,28 @@ body{
     position:relative;
     bottom: 119px;
 }
-#soon{}
+#soon h2{
+ animation: soon-h2 2s infinite ease 1s;
+}
+@keyframes skill-h2{
+    from{
+        color: rgb(28, 89, 255);
+    }
+    50%{
+        color: rgb(115, 153, 255);
+    }
+    to{
+        color: rgb(28, 89, 255);
+    }
+}
+@keyframes soon-h2{
+    from{
+        color: rgb(255, 0, 0);
+    }
+    50%{
+        color: rgb(104, 0, 0);
+    }
+    to{
+        color: rgb(255, 0, 0);
+    }
+}
