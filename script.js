@@ -1,15 +1,29 @@
-function years(year){
-    if(years < 13){
-        console.log("drink toddy")
+document.addEventListener('DOMContentLoaded', function () {
+    let blocks = document.querySelectorAll('.project');
+
+    function checkBlocksVisibility() {
+        let windowHeight = window.innerHeight;
+
+        blocks.forEach(block => {
+            let blockPosition = block.getBoundingClientRect().top;
+            let blockBottom = block.getBoundingClientRect().bottom;
+
+            if (blockPosition < windowHeight - 100 && blockBottom > 0) {
+                block.classList.add('visible');
+            } else {
+                block.classList.remove('visible'); 
+            }
+        });
     }
-    else if(years < 17){
-        console.log("drink coke")
-    }
-    else if(years < 21){
-        console.log("drink beer")
-    }
-    else if(years >= 21){
-        console.log("drink whisky")
-    }
-}
-years(17)
+
+    checkBlocksVisibility();
+
+    window.addEventListener('scroll', checkBlocksVisibility);
+});
+const skill1 = document.querySelector(".skill1")
+skill1.addEventListener("mouseover", function(event){
+    skill1.style.animation = "skill-animation 2s infinite ease-in 1s;"
+})
+skill1.addEventListener("mouseout", function(event){
+    skill1.style.animation = "none"
+})
