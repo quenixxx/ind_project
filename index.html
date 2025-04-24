@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>BIO | quenixxx</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body >
@@ -17,10 +17,11 @@
             <nav>
 
                 <ul>
-                    <a href="#sec1">&lt;/Home&gt;</a>
+                    <a href="#sec1">&lt;/Home&gt;</a>   
                     <a href="#sec2">&lt;/AboutMe&gt;</a>
-                    <a href="sec3">&lt;/Skills&gt;</a>
-                    <a href="">&lt;/Project&gt;</a>
+                    <a href="#sec3">&lt;/Skills&gt;</a>
+                    <a href="#sec4">&lt;/Project&gt;</a>
+                    <button id="themeToggle">🌓</button>
                 </ul>
             </nav>
         </div>
@@ -28,25 +29,22 @@
             <h1>Hello(); I'm</h1>
             <h2>Quenixxx</h2>
             <p>Все ещё в стадии разработки, прошу не критиковать!</p>
-            <img src="./media/avatar.jpg" alt="" width="400px">
+            <img src="./media/avatar.jpg" alt="" width="400px" style="box-shadow: 0 0 8px 0 rgb(80, 80, 80);">
         </div>
-
-    <!-- <div><a href="https://allcalc.ru/node/1870" data-weight="450px" data-height="400px">Сколько дней осталось до лета</a><script src="https://allcalc.ru/widgets/script.js"></script></div> -->
-
 
     </header>
     <main>
-        <section class="container project">
-            <div class="about-me-line">
+        <section class="container project" id="sec2">
+            <div class="about-me-line" >
                 <h2>&lt;/AboutMe&gt;</h2>
                 <hr width="270px" size="2px">
             </div>
             <div class="about-text">
-                <p id="text">Всем привет! Меня зовут Савелий, мне XXX лет. Моя роль IT Сферы - Frontend-Developer. Увлекаюсь вертской сайтов и веб-приложений. На данный момент я учусь этому всему, прошу не критиковать, если у вас есть возможность мне подсказать или подправить что-либо, прошу написать мне в Discord. <br><br> В последнее время я изучал JS, планирую перейти на React! Также у меня было много разных проектов, но к сожалению на данный момент они все заброшены. Один из них был VortexTech. Это была моя личная студия, где я занимался разработкой ТГ ботов на заказ, а также предоставлял услуги по продаже VDS/VSP и подписок на разные сервисы. <br><br> Также у меня есть свой <a id="Github" href="#">GitHub</a>, где я буду публиковать свои работы</p>
+                <p id="text">Всем привет! Меня зовут Савелий, мне <span id="age"></span> лет. Моя роль IT Сферы - Frontend-Developer. Увлекаюсь вертской сайтов и веб-приложений. На данный момент я учусь этому всему, прошу не критиковать, если у вас есть возможность мне подсказать или подправить что-либо, прошу написать мне в Discord. <br><br> В последнее время я изучал JS, планирую перейти на React! Также у меня было много разных проектов, но к сожалению на данный момент они все заброшены. Один из них был VortexTech. Это была моя личная студия, где я занимался разработкой ТГ ботов на заказ, а также предоставлял услуги по продаже VDS/VSP и подписок на разные сервисы. <br><br> Также у меня есть свой <a id="Github" href="#">GitHub</a>, где я буду публиковать свои работы</p>
                 <img src="./media/about.jpg" alt="" width="300px" id="about">
             </div>
         </section>
-        <section class="container project">
+        <section class="container project" id="sec3">
             <div class="about-me-line" id="sec3">
                 <h2>&lt;/Skills&gt;</h2>
                 <hr width="270px" size="2px">
@@ -71,7 +69,7 @@
                 </div>
             </div>
         </section>
-        <section class="projects container project">
+        <section class="projects container project" id="sec4">
             <div class="about-me-line" id="sec3">
                 <h2>&lt;/Projects&gt;</h2>
                 <hr width="270px" size="2px">
@@ -97,13 +95,13 @@
         <!-- <div style="color: white;"><a style="color: white;" href="https://allcalc.ru/node/1870" data-weight="450px" data-height="400px">Сколько дней осталось до лета</a><script src="https://allcalc.ru/widgets/script.js"></script></div> -->
     </main>
     <footer class="container footer-copy">
-        <a><button>Пасхалка</button></a>
+        <a><button id="egg">Пасхалка</button></a>
         <p>@Copyright 2025 VortexTech</p>
     </footer>
 
-    <script src="/script.js"></script>
     <img id="easter-egg" src="./media/boo.png" alt="boo" style="display: none;">
     <audio id="bg-music" src="./media/music.mp3" preload="auto" loop></audio>
+    <script src="/script.js" defer></script>
 
 </body>
 </html>

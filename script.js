@@ -27,7 +27,7 @@ skill1.addEventListener("mouseover", function(event){
 skill1.addEventListener("mouseout", function(event){
     skill1.style.animation = "none"
 })
-document.querySelector('button').addEventListener('click', () => {
+document.querySelector('#egg').addEventListener('click', () => {
     const egg = document.getElementById('easter-egg');
     egg.style.display = 'block';
 
@@ -59,3 +59,12 @@ function updateTime() {
 
 setInterval(updateTime, 1000);
 updateTime();
+
+const birthYear = 2007;
+const age = new Date().getFullYear() - birthYear;
+document.getElementById('age').textContent = age;
+
+const toggle = document.getElementById("themeToggle");
+toggle.addEventListener("click", () => {    
+document.body.classList.toggle("light-theme");
+});
